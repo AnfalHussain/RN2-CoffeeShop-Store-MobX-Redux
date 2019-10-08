@@ -14,7 +14,7 @@ class CoffeeItem extends Component {
   render() {
     const { coffeeShop } = this.props;
     return (
-      <ImageBackground source={coffeeShop.background} style={styles.background}>
+      <ImageBackground source={{ uri: coffeeShop.background }} style={styles.background}>
         <View style={styles.overlay} />
         <ListItem button onPress={this.handlePress} style={styles.listitem}>
           <Card style={styles.transparent}>
@@ -22,7 +22,7 @@ class CoffeeItem extends Component {
               <Left>
                 <Thumbnail
                   bordered
-                  source={coffeeShop.img}
+                  source={{ uri: coffeeShop.img }}
                   style={styles.thumbnail}
                 />
                 <Text style={styles.text}>{coffeeShop.name}</Text>
