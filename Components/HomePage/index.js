@@ -17,12 +17,13 @@ import { connect } from "react-redux";
 
 import { getCoffeeShops } from "../../store/actions/coffeeActions.js"
 
-
+import * as actionsCreators from "../../store/actions/"
 
 
 class HomePage extends Component {
-  componentDidMount() {
-    this.props.getCoffeeShops();
+
+  async componentDidMount() {
+    await this.props.getCoffeeShops();
 
   }
 
@@ -40,7 +41,7 @@ class HomePage extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getCoffeeShops: () => dispatch(getCoffeeShops()),
+    getCoffeeShops: () => dispatch(actionsCreators.getCoffeeShops()),
 
   };
 };

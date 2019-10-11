@@ -13,8 +13,8 @@ class CoffeeList extends Component {
 
   render() {
     let shops;
-    if (this.props.coffeeshops) {
-      shops = this.props.coffeeshops.map(coffeeShop => (
+    if (this.props.coffeeShops) {
+      shops = this.props.coffeeShops.map(coffeeShop => (
         <CoffeeItem coffeeShop={coffeeShop} key={coffeeShop.id} />
       ));
     }

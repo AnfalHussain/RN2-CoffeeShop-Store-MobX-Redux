@@ -14,7 +14,7 @@ const coffeeReducer = (state = initialState, action) => {
         case actionTypes.GET_COFFEESHOPS:
             return {
                 ...state,
-                channel: action.payload,
+                coffeeShops: action.payload,
                 loading: false
 
             };
